@@ -46,8 +46,23 @@ app.get('/weather', (req, res) => {
   });
 });
 
-const port = 3000;
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Davin Casely',
+    message: 'This is the 404 Message for HELP PAGE',
+  });
+});
 
+app.get('/*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Davin Casely',
+    message: 'This is the General 404 Page.',
+  });
+});
+
+const port = 3000;
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
