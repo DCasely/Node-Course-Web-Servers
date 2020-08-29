@@ -40,9 +40,27 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: 'Address must be provided',
+    });
+  }
   res.send({
     forecast: 'Sunny',
-    location: 'Miami, FL',
+    location: 'Miami',
+    address: req.query.address,
+  });
+});
+
+app.get('/products', (req, res) => {
+  if (!req.query.search) {
+    return res.send({
+      error: 'You must provide a search term',
+    });
+  }
+
+  res.send({
+    products: [],
   });
 });
 
