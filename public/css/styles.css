@@ -4,11 +4,19 @@ body {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 header {
   margin-top: 16px;
   margin-bottom: 48px;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 h1 {
@@ -27,4 +35,8 @@ footer {
   border-top: 1px solid #eee;
   margin-top: 16px;
   padding: 16px 0;
+}
+
+.portrait {
+  width: 250px;
 }

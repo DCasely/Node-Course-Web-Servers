@@ -5,19 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/img/weather.png" type="image/x-icon">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
-    <title>Web Server</title>
+    <title>Help</title>
 </head>
 
 <body>
-    {{>header}}
+    <div class="main-content">
+        {{>header}}
 
-    <p>
-        {{help_message}}
-    </p>
+        <p>
+            {{help_message}}
+        </p>
+    </div>
 
     {{>footer}}
 </body>
