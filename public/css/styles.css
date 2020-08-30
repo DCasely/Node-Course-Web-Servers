@@ -1,5 +1,8 @@
 body {
-  color: #333;
+  background-image: url(/img/miamibeachview.jpg);
+  background-size: cover;
+
+  color: #fff;
   font-family: arial;
   max-width: 650px;
   margin: 0 auto;
@@ -11,12 +14,17 @@ body {
 }
 
 header {
-  margin-top: 16px;
-  margin-bottom: 48px;
+  margin: 5% 0 10%;
 }
 
 .main-content {
   flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -24,14 +32,28 @@ h1 {
   margin-bottom: 16px;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
+.weather-data {
+  font-size: 2rem;
+}
+
+.weather-data p {
+  border-bottom: 1px solid #fff;
+}
+
 header a {
-  color: #888;
+  color: #fff;
   margin-right: 16px;
   text-decoration: none;
 }
 
 footer {
-  color: #888;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
   border-top: 1px solid #eee;
   margin-top: 16px;
   padding: 16px 0;
@@ -39,4 +61,18 @@ footer {
 
 .portrait {
   width: 250px;
+}
+
+button,
+button:focus {
+  color: #fff;
+}
+
+/* button:focus {
+  color: red;
+} */
+
+button:hover {
+  background-color: #fff;
+  color: #000;
 }
