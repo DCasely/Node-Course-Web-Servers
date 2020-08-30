@@ -22,21 +22,21 @@ app.use(express.static(publicDirectoryPath));
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'Davin Casely',
+    name: 'The Casely Group',
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Page',
-    name: 'Davin Casely',
+    name: 'The Casely Group',
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help Page',
-    name: 'Davin Casely',
+    name: 'The Casely Group',
     help_message: 'This is the HELP MESSAGE...',
   });
 });
