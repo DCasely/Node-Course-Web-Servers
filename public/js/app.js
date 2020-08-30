@@ -1,26 +1,21 @@
-// fetch('http://puzzle.mead.io/puzzle').then((response) => {
-//   response.json().then((data) => {
-//     console.log(data);
-//   });
-// });
+const weatherForm = document.querySelector('form');
+const search = document.querySelector('input');
 
-// const address = 'miami';
-// const latitude = 25.7743;
-// const longitude = -80.1937;
+weatherForm.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-// const url = `http://api.weatherstack.com/current?access_key=13604b194e0d222bdc14bb1db6712980&query=${encodeURIComponent(
-//   latitude
-// )},${encodeURIComponent(longitude)}&units=f`;
+  // FETCH WEATHER DATA
+  const location = search.value;
+  const weatherUrl = `http://localhost:3000/weather?address=${location}`;
 
-const url = 'http://localhost:3000/weather?address=!';
-
-fetch(url).then((response) => {
-  response.json().then((data) => {
-    if (data.error) {
-      console.log(data.error);
-    } else {
-      console.log(data.location);
-      console.log(data.forecast);
-    }
+  fetch(weatherUrl).then((response) => {
+    response.json().then((data) => {
+      if (data.error) {
+        console.log(data.error);
+      } else {
+        console.log(data.location);
+        console.log(data.forecast);
+      }
+    });
   });
 });
