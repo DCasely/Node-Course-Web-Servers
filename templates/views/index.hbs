@@ -16,14 +16,12 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
 
-    <title>Weather</title>
+    <title>Weather App</title>
 </head>
 
 <body>
     <div class="main-content">
         {{>header}}
-
-        <h2>Get the Weather Data for your City!</h2>
 
         <form action="">
             <input type="text" placeholder="Search City">
@@ -31,10 +29,17 @@
         </form>
 
         <div class="weather-data">
-            <p id="city"></p>
-            <p id="weather"></p>
-            <p id="temp"></p>
-            <p id="feelsLike"></p>
+            <h3>Location</h3>
+            <p id="city">Location</p>
+
+            <h3>Weather</h3>
+            <p id="weather">Weather Description</p>
+
+            <h3>Temperature</h3>
+            <p id="temp">Temp</p>
+
+            <h3>Feels Like</h3>
+            <p id="feelsLike">Feels Like</p>
         </div>
 
     </div>

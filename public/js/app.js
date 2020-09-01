@@ -16,13 +16,12 @@ weatherForm.addEventListener('submit', (e) => {
     response.json().then((data) => {
       if (data.error) {
         city.textContent = data.error;
-        city.style.color = 'red';
       } else {
-        city.style.color = '#fff';
-        city.textContent = `Location: ${data.location}`;
-        weather.textContent = `Weather: ${data.forecast.weather}`;
-        temp.textContent = `Temperature: ${data.forecast.temp}°`;
-        feelsLike.textContent = `Feels Like: ${data.forecast.feelsLike}°`;
+        console.log(data);
+        city.textContent = data.location;
+        weather.textContent = data.forecast.weather;
+        temp.textContent = data.forecast.temp;
+        feelsLike.textContent = data.forecast.feelsLike;
       }
     });
   });

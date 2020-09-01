@@ -1,13 +1,11 @@
 body {
   background-image: url(/img/miamibeachview.jpg);
   background-size: cover;
-
   color: #fff;
-  font-family: arial;
+  text-transform: uppercase;
   max-width: 650px;
   margin: 0 auto;
   padding: 0 16px;
-
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -18,17 +16,25 @@ header {
 }
 
 .main-content {
-  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.5);
+  height: 90vh;
   margin-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex-direction: column;
 }
 
+.header-links {
+  text-align: center;
+}
+
+.main-content p {
+  width: 90%;
+}
+
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   margin-bottom: 16px;
 }
 
@@ -37,11 +43,32 @@ h2 {
 }
 
 .weather-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.weather-data h3 {
   font-size: 2rem;
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .weather-data p {
   border-bottom: 1px solid #fff;
+  text-align: center;
+  background: #fff;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  color: #000;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  justify-content: center;
 }
 
 header a {
@@ -51,26 +78,20 @@ header a {
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 50px;
+  margin-top: 50px;
+  padding-top: 2.5%;
   color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
   border-top: 1px solid #eee;
-  margin-top: 16px;
-  padding: 16px 0;
-}
-
-.portrait {
-  width: 250px;
 }
 
 button,
 button:focus {
   color: #fff;
 }
-
-/* button:focus {
-  color: red;
-} */
 
 button:hover {
   background-color: #fff;
